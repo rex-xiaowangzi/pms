@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!-- settt ing标签设置重要键值对的，name设置键，value设置值mapUnderscoreToCamelCase :
+		可以映射数据表中以下列线分割的列名如: user_name到pojo对象的以驼峰式命名的属性名userName
+	-->
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+		<!-- 开启全局懒加载 -->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="aggressiveLazyLoading" value=""/>
+	</settings>
+
+	<plugins>
+		<plugin interceptor ="com.github.pagehelper.PageInterceptor">
+			<property name="helperDialect" value="mysql"></property>
+			<property name=" reasonable" value ="true"></property>
+		</plugin>
+	</plugins>
+
+
+
+		</configuration>

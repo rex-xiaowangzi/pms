@@ -1,0 +1,2 @@
+BigDecimal one = new BigDecimal("1.44335632343E21");  
+  System.out.println(one.toPlainString());
